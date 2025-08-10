@@ -1,33 +1,39 @@
-# Rhythm Engine Master Configuration
-# Environmental consciousness through autonomous breathing patterns
+# Rhythm Engine Master Configuration - Weekly Color Architecture
+# Environmental consciousness through autonomous breathing patterns with daily personality progression
 
 rhythm_engine:
-  # Core timing
+  # Core timing and breathing fundamentals
   base_duration_percentage: 16.7
   seasonal_coefficients:
-    winter_solstice: 1.34  # +34%
-    summer_solstice: 0.77  # -23%
+    winter_solstice: 1.34  # +34% breathing duration
+    summer_solstice: 0.77  # -23% breathing duration
     
-  # Lunar modulation
-  lunar_temperature_modulation:
-    increment_per_shift: 6    # Kelvin increase per green flash during waxing
-    shifts_per_cycle: 28      # Standardized lunar cycle (14 waxing + 14 waning)
-    max_swing: 84             # Total temperature range (6K * 14 shifts)
-    midpoint_centered: true   # ±42K from baseline, not 0→84K
+  # Lunar breathing rate modulation (separate from color temperature)
+  lunar_breathing_rate:
+    base_rate_bpm: 10.0      # Breathing rate at apogee (moon farthest)
+    max_rate_bpm: 12.0       # Breathing rate at perigee (moon closest) 
+    cycle_days: 27.3         # Anomalistic lunar month (perigee to perigee)
+    metabolic_seasonality: true  # Subtle long-term rhythm below conscious awareness
     
-  # Environmental consciousness
+  # Environmental consciousness (affects breathing depth, not rate)
   environmental_response:
     muggy_threshold: 56       # dewpoint in Fahrenheit
     muggy_max: 75
     dryness_threshold: 45
     extreme_humidity_threshold: 79  # Circuit overload flash trigger
-    pressure_sensitivity: 0.1
+    pressure_sensitivity: 0.1      # Affects breathing depth
     cloud_saturation_effect: 0.15
+    
+  # Weekly color schedule architecture
+  weekly_progression:
+    enable_weekly_colors: true
+    sunday_grey_breathing: true    # Special RGB mode for Sunday
+    inherit_shapeshift_colors: true # Friday/Saturday shapeshifts use daily colors as base
     
   # Frequency control
   shapeshift_frequency: 9     # 0=off, 9=full with occasional misses
     
-  # Special events
+  # Special events (preserved from original architecture)
   special_events:
     solstice_solar_mode: true
     sympathetic_lightning: true
@@ -39,63 +45,216 @@ rhythm_engine:
     special_night_definition: "green_flash_to_green_flash"
     front_porch_schedule: "golden_hour_based"
 
-# Breathing module configurations
+# Weekly Thermal Progression - Seven Daily Personalities
+weekly_schedule:
+  sunday:
+    # Special RGB grey breathing (not Kelvin-based)
+    mode: "rgb_breathing"
+    exhale_rgb: [120, 128, 135]  # Slightly blue-grey
+    inhale_rgb: [135, 128, 120]  # Slightly red-grey
+    description: "Swinburne's grey breath - 'the world has grown grey from thy breath'"
+    
+  monday:
+    # Kelvin-based thermal breathing
+    mode: "kelvin_breathing"
+    wakeful_breathing: 
+      exhale_k: 3400
+      inhale_k: 2600
+    sleep_breathing:
+      exhale_k: 2600  
+      inhale_k: 2200
+    meditation:
+      exhale_k: 3400
+      inhale_k: 2600
+    inebriated:
+      exhale_k: 2550
+      inhale_k: 1950
+    description: "Monday thermal range - beginning the week's warming progression"
+    
+  tuesday:
+    mode: "kelvin_breathing"
+    wakeful_breathing:
+      exhale_k: 3000
+      inhale_k: 2200
+    sleep_breathing:
+      exhale_k: 2600
+      inhale_k: 2200
+    meditation:
+      exhale_k: 3000
+      inhale_k: 2200
+    inebriated:
+      exhale_k: 2350
+      inhale_k: 1750
+    description: "Tuesday thermal range - continued warming"
+    
+  wednesday:
+    mode: "kelvin_breathing"
+    wakeful_breathing:
+      exhale_k: 2200
+      inhale_k: 1400
+    sleep_breathing:
+      exhale_k: 1800
+      inhale_k: 1400
+    meditation:
+      exhale_k: 2200
+      inhale_k: 1400
+    inebriated:
+      exhale_k: 1750
+      inhale_k: 1150
+    description: "Wednesday thermal range - mid-week depth"
+    
+  thursday:
+    mode: "kelvin_breathing"  
+    wakeful_breathing:
+      exhale_k: 1800
+      inhale_k: 1000
+    sleep_breathing:
+      exhale_k: 1400
+      inhale_k: 1000
+    meditation:
+      exhale_k: 1800
+      inhale_k: 1000
+    inebriated:
+      exhale_k: 1550
+      inhale_k: 950
+    description: "Thursday thermal range - deepest warmth before weekend"
+    
+  friday:
+    mode: "kelvin_breathing"
+    # Base colors for breathing, but shapeshifts inherit these as starting points
+    wakeful_breathing:
+      exhale_k: 2200
+      inhale_k: 1400
+    sleep_breathing:
+      exhale_k: 1800
+      inhale_k: 1400
+    meditation:
+      exhale_k: 2200
+      inhale_k: 1400
+    inebriated:
+      exhale_k: 1750
+      inhale_k: 1150
+    shapeshift_enabled: true
+    shapeshift_inheritance: "use_daily_colors_as_base"
+    description: "Friday - shapeshift capability with inherited daily thermal range"
+    
+  saturday:
+    mode: "kelvin_breathing"
+    # Full spectrum day with maximum color range
+    wakeful_breathing:
+      exhale_k: 3400
+      inhale_k: 1000  # Full span across the week's range
+    sleep_breathing:
+      exhale_k: 2600
+      inhale_k: 1000
+    meditation:
+      exhale_k: 3400
+      inhale_k: 1000
+    inebriated:
+      exhale_k: 2550
+      inhale_k: 950
+    shapeshift_enabled: true
+    shapeshift_inheritance: "use_daily_colors_as_base"
+    description: "Saturday - full spectrum thermal range and shapeshift capability"
+
+# Track Separation - Indoor and Outdoor Coordination
+track_coordination:
+  enable_indoor_outdoor_separation: true
+  
+  indoor_track:
+    # Sunday exception: indoor stays colorful ambers during grey Sunday cycle
+    sunday_override:
+      mode: "kelvin_breathing"
+      use_colors_from: "saturday"  # "Paganism between the sheets"
+      description: "Indoor lights maintain warm colors during Sunday grey cycle"
+    
+    # Regular schedule follows weekly progression
+    monday_through_saturday: "follow_weekly_schedule"
+    daytime_behavior: "always_on"
+    
+  outdoor_track:
+    # Strict adherence to weekly schedule including Sunday grey
+    all_days: "follow_weekly_schedule"
+    
+    # Daytime behavior varies by day
+    daytime_behavior:
+      monday_through_friday: "golden_hour_off"  # Off during day
+      saturday_sunday: "always_on"              # On all day for contrast
+      
+  # Synchronized timing but different color vocabularies
+  shared_timing:
+    breathing_rhythm: true     # Same breathing rate and depth
+    astronomical_events: true  # Same sunrise/sunset/shapeshift timing
+    environmental_response: true # Same weather-based modifications
+    priority_system: true     # Same emergency overrides
+
+# Audio Integration - Brown Noise Breathing
+audio_system:
+  brown_noise_breathing:
+    enable: true
+    base_audio_file: "12hour_brown_noise.mp3"  # Or similar continuous file
+    
+    # Amplitude follows visual breathing depth (not volume/decibels)
+    amplitude_modulation:
+      sync_to: "visual_breathing_depth"  # Follows barometric pressure effects
+      base_amplitude: 1.0
+      max_variation: 0.3  # 30% amplitude swing based on environmental breathing depth
+      
+    # Voice control
+    voice_commands:
+      enable_hush: true
+      hush_command: "hush"
+      resume_behavior: "gradual_fade_in"
+      
+    # Future alert framework (placeholder)
+    alert_system:
+      enable: false  # No alerts defined yet
+      reserved_for_future: true
+
+# Priority System (preserved from original)
 breathing_modules:
   emergency_fallback: 
     priority: 99
     base_temperature_k: 2200
     lunar_modulation: false
+    weekly_schedule_override: false  # Always amber fallback
+    
   wakeful_breathing: 
     priority: 35
-    base_temperature_k: 2600
-    lunar_modulation: true
+    follows_weekly_schedule: true
+    
   sleep_breathing: 
-    priority: 35
-    base_temperature_k: 2000
-    lunar_modulation: true
+    priority: 35  
+    follows_weekly_schedule: true
+    
   meditation: 
     priority: 25
-    base_temperature_k: 2600
-    lunar_modulation: true
+    follows_weekly_schedule: true
+    
   inebriated: 
     priority: 25
-    base_temperature_k: 1950
-    lunar_modulation: true
-    
-# Performance styles
-performance_styles:
-  subtle: 0.25
-  smooth: 0.35
-  theatrical: 0.25
-  glitch_heavy: 0.15
+    follows_weekly_schedule: true
 
-# Inter-system coordination
-coordination:
-  message_bus_enabled: true
-  mqtt_broker: "localhost:1883"
-  audio_visual_delay: 5      # seconds
-  visitor_timeout: 300       # seconds
-  priority_override_timeout: 30
-
-# Special event configurations
+# Special Events (enhanced for new architecture)
 special_events:
   solstice_solar_mode:
     duration: "green_flash_to_green_flash"
     background_breathing: "pranayama_cycling"
     foreground_effect: "coronal_surface_animation"
-    thermal_signature: [2800, 3200]  # warm solar spectrum
+    thermal_signature: [2800, 3200]  # Warm solar spectrum
     brightness_variation: "continuous_gentle"
-    schedule_override: true
+    schedule_override: true          # Suspends weekly schedule
     frequency: "twice_yearly"
     priority: 20
 
   sympathetic_lightning:
     trigger: "lightning_detection"
-    delay: [2, 3]              # seconds after detected flash
+    delay: [2, 3]                    # Seconds after detected flash
     duration: "mimic_original"
-    color_temperature_k: [6500, 8000]  # white with blue tinge
+    color_temperature_k: [6500, 8000] # White with blue tinge
     brightness: "full_intensity"
     priority: 44
+    applies_to: "both_tracks"        # Indoor and outdoor
 
   first_responder_respect:
     trigger: "emergency_flash_pattern_60s"
@@ -105,22 +264,55 @@ special_events:
     maintain_breathing: true
     duration: "until_clear_plus_5min"
     priority: 13
+    applies_to: "both_tracks"
 
-# VM Prototype Mode Settings
+# Hardware Configuration
+hardware:
+  lighting_controllers:
+    indoor_nollie32:
+      zones: []                      # To be populated with actual hardware addresses
+      track: "indoor"
+      
+    outdoor_nollie32:  
+      zones: []                      # To be populated with actual hardware addresses
+      track: "outdoor"
+      
+    hue_bridge_integration:
+      enable: true
+      coordinate_with_nollie32: true
+      
+  audio_controllers:
+    z623_speakers:
+      location: "house_structural_center"
+      brown_noise_capability: true
+      
+  sensor_network:
+    esp32_nodes: []                  # Environmental sensor network
+    linssid_monitoring: true         # Network analysis for emergency detection
+    audio_detection: true            # Sound analysis for emergency vehicles
+
+# Development and Testing
 vm_prototype:
-  time_acceleration: 60       # 1 minute = 1 hour
+  time_acceleration: 60              # 1 minute = 1 hour for testing
   mock_weather_data: true
   simulate_astronomical_events: true
   enable_manual_triggers: true
   debug_priority_conflicts: true
   log_environmental_calculations: true
+  test_weekly_progression: true      # Enable rapid day cycling for testing
 
-# Hardware abstraction
-hardware:
-  rgb_controllers:
-    indoor_zones: []          # To be populated with actual hardware
-    outdoor_zones: []
-  audio_systems:
-    brown_noise_speakers: []
-  sensors:
-    environmental_nodes: []   # ESP32 sensor network
+# Inter-system Coordination
+coordination:
+  message_bus_enabled: true
+  mqtt_broker: "localhost:1883"
+  audio_visual_delay: 5              # Seconds between systems
+  visitor_timeout: 300               # Seconds
+  priority_override_timeout: 30
+  
+  # Failure detection and signaling
+  failure_management:
+    central_rhythm_engine: true      # Single source of timing commands
+    indoor_monitors_outdoor: true    # Indoor signals if outdoor fails
+    outdoor_failure_priority: "high" # Outdoor failure more critical
+    indoor_failure_priority: "medium"
+    failure_signal_method: "visual_alert"
