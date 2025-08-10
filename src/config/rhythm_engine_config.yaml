@@ -1,0 +1,126 @@
+# Rhythm Engine Master Configuration
+# Environmental consciousness through autonomous breathing patterns
+
+rhythm_engine:
+  # Core timing
+  base_duration_percentage: 16.7
+  seasonal_coefficients:
+    winter_solstice: 1.34  # +34%
+    summer_solstice: 0.77  # -23%
+    
+  # Lunar modulation
+  lunar_temperature_modulation:
+    increment_per_shift: 6    # Kelvin increase per green flash during waxing
+    shifts_per_cycle: 28      # Standardized lunar cycle (14 waxing + 14 waning)
+    max_swing: 84             # Total temperature range (6K * 14 shifts)
+    midpoint_centered: true   # ±42K from baseline, not 0→84K
+    
+  # Environmental consciousness
+  environmental_response:
+    muggy_threshold: 56       # dewpoint in Fahrenheit
+    muggy_max: 75
+    dryness_threshold: 45
+    extreme_humidity_threshold: 79  # Circuit overload flash trigger
+    pressure_sensitivity: 0.1
+    cloud_saturation_effect: 0.15
+    
+  # Frequency control
+  shapeshift_frequency: 9     # 0=off, 9=full with occasional misses
+    
+  # Special events
+  special_events:
+    solstice_solar_mode: true
+    sympathetic_lightning: true
+    first_responder_respect: true
+    
+  # Context-dependent timing
+  timing_contexts:
+    normal_day_definition: "golden_hour_to_golden_hour"
+    special_night_definition: "green_flash_to_green_flash"
+    front_porch_schedule: "golden_hour_based"
+
+# Breathing module configurations
+breathing_modules:
+  emergency_fallback: 
+    priority: 99
+    base_temperature_k: 2200
+    lunar_modulation: false
+  wakeful_breathing: 
+    priority: 35
+    base_temperature_k: 2600
+    lunar_modulation: true
+  sleep_breathing: 
+    priority: 35
+    base_temperature_k: 2000
+    lunar_modulation: true
+  meditation: 
+    priority: 25
+    base_temperature_k: 2600
+    lunar_modulation: true
+  inebriated: 
+    priority: 25
+    base_temperature_k: 1950
+    lunar_modulation: true
+    
+# Performance styles
+performance_styles:
+  subtle: 0.25
+  smooth: 0.35
+  theatrical: 0.25
+  glitch_heavy: 0.15
+
+# Inter-system coordination
+coordination:
+  message_bus_enabled: true
+  mqtt_broker: "localhost:1883"
+  audio_visual_delay: 5      # seconds
+  visitor_timeout: 300       # seconds
+  priority_override_timeout: 30
+
+# Special event configurations
+special_events:
+  solstice_solar_mode:
+    duration: "green_flash_to_green_flash"
+    background_breathing: "pranayama_cycling"
+    foreground_effect: "coronal_surface_animation"
+    thermal_signature: [2800, 3200]  # warm solar spectrum
+    brightness_variation: "continuous_gentle"
+    schedule_override: true
+    frequency: "twice_yearly"
+    priority: 20
+
+  sympathetic_lightning:
+    trigger: "lightning_detection"
+    delay: [2, 3]              # seconds after detected flash
+    duration: "mimic_original"
+    color_temperature_k: [6500, 8000]  # white with blue tinge
+    brightness: "full_intensity"
+    priority: 44
+
+  first_responder_respect:
+    trigger: "emergency_flash_pattern_60s"
+    action: "respectful_dimming"
+    brightness_ceiling: 0.3
+    saturation_reduction: 0.5
+    maintain_breathing: true
+    duration: "until_clear_plus_5min"
+    priority: 13
+
+# VM Prototype Mode Settings
+vm_prototype:
+  time_acceleration: 60       # 1 minute = 1 hour
+  mock_weather_data: true
+  simulate_astronomical_events: true
+  enable_manual_triggers: true
+  debug_priority_conflicts: true
+  log_environmental_calculations: true
+
+# Hardware abstraction
+hardware:
+  rgb_controllers:
+    indoor_zones: []          # To be populated with actual hardware
+    outdoor_zones: []
+  audio_systems:
+    brown_noise_speakers: []
+  sensors:
+    environmental_nodes: []   # ESP32 sensor network
